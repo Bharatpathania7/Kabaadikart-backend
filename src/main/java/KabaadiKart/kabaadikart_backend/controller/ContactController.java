@@ -9,13 +9,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/ContactUs")
-@CrossOrigin( origins = "*")
+//@CrossOrigin( origins = "*")
 public class ContactController {
     @Autowired
     private ContactUsRepository contactUsRepository;
 
     @PostMapping
-    private ContactUs Message(@RequestBody ContactUs contactUs){
+    public ContactUs Message(@RequestBody ContactUs contactUs){
         return contactUsRepository.save(contactUs);
     }
 //    @GetMapping
